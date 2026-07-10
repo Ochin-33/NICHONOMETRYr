@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perimeter Calculator - Nichonometry</title>
+
+    <link rel="icon" type="image/png" href="img/NJ.jpg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+   <div class="logo">
+              <img src="img/NJ.jpg" alt="Nichonometry Logo">
+              <a href="index.html">Nichonometry</a>
+        </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="area.html">Area</a></li>
+                <li><a href="volume.html">Volume</a></li>
+                <li><a href="perimeter.html" class="active">Perimeter</a></li>
+                <li><a href="diameter.html">Diameter</a></li>
+                <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+<h2>Perimeter Calculator</h2>
+
+<div class="card-container">
+
+    <!-- Rectangle -->
+    <div class="card">
+        <h3>Rectangle</h3>
+
+        <p><b>Formula:</b> P = 2(L + W)</p>
+
+        <input type="number" id="prectLength" placeholder="Length"><br><br>
+        <input type="number" id="prectWidth" placeholder="Width"><br><br>
+
+        <button onclick="rectanglePerimeter()">Solve</button>
+
+        <br><br>
+
+        <label>Answer</label>
+        <input type="text" id="prectResult" readonly>
+    </div>
+
+    <!-- Square -->
+    <div class="card">
+
+        <h3>Square</h3>
+
+        <p><b>Formula:</b> P = 4 × Side</p>
+
+        <input type="number" id="psquareSide" placeholder="Side">
+
+        <br><br>
+
+        <button onclick="squarePerimeter()">Solve</button>
+
+        <br><br>
+
+        <label>Answer</label>
+        <input type="text" id="psquareResult" readonly>
+
+    </div>
+
+    <!-- Triangle -->
+    <div class="card">
+
+        <h3>Triangle</h3>
+
+        <p><b>Formula:</b> P = Side₁ + Side₂ + Side₃</p>
+
+        <input type="number" id="triSide1" placeholder="Side 1"><br><br>
+
+        <input type="number" id="triSide2" placeholder="Side 2"><br><br>
+
+        <input type="number" id="triSide3" placeholder="Side 3"><br><br>
+
+        <button onclick="trianglePerimeter()">Solve</button>
+
+        <br><br>
+
+        <label>Answer</label>
+        <input type="text" id="triPerimeterResult" readonly>
+
+    </div>
+
+    <!-- Circle -->
+    <div class="card">
+
+        <h3>Circle (Circumference)</h3>
+
+        <p><b>Formula:</b> C = 2πr</p>
+
+        <input type="number" id="circleRadiusP" placeholder="Radius">
+
+        <br><br>
+
+        <button onclick="circlePerimeter()">Solve</button>
+
+        <br><br>
+
+        <label>Answer</label>
+        <input type="text" id="circlePerimeterResult" readonly>
+
+    </div>
+
+    <!-- Parallelogram -->
+    <div class="card">
+
+        <h3>Parallelogram</h3>
+
+        <p><b>Formula:</b> P = 2(Base + Side)</p>
+
+        <input type="number" id="paraBaseP" placeholder="Base"><br><br>
+
+        <input type="number" id="paraSideP" placeholder="Side"><br><br>
+
+        <button onclick="parallelogramPerimeter()">Solve</button>
+
+        <br><br>
+
+        <label>Answer</label>
+        <input type="text" id="paraPerimeterResult" readonly>
+
+    </div>
+
+</div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Nichonometry</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator - Nichonometry</title>
+
+    <link rel="icon" type="image/png" href="img/NJ.jpg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+              <img src="img/NJ.jpg" alt="Nichonometry Logo">
+             <a href="index.html">Nichonometry</a>
+        </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+                <li><a href="calculator.html" class="active">Calculator</a></li>
+                <li><a href="area.html">Area</a></li>
+                <li><a href="volume.html">Volume</a></li>
+                <li><a href="perimeter.html">Perimeter</a></li>
+                <li><a href="diameter.html">Diameter</a></li>
+                <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+<section class="calculator-section">
+
+<h2>Scientific Calculator</h2>
+
+<div class="calculator">
+
+<input type="text" id="display" readonly>
+
+<div class="calc-buttons">
+
+<button onclick="clearDisplay()">C</button>
+<button onclick="appendValue('(')">(</button>
+<button onclick="appendValue(')')">)</button>
+<button onclick="appendValue('%')">%</button>
+
+<button onclick="appendValue('7')">7</button>
+<button onclick="appendValue('8')">8</button>
+<button onclick="appendValue('9')">9</button>
+<button onclick="appendValue('/')">÷</button>
+
+<button onclick="appendValue('4')">4</button>
+<button onclick="appendValue('5')">5</button>
+<button onclick="appendValue('6')">6</button>
+<button onclick="appendValue('*')">×</button>
+
+<button onclick="appendValue('1')">1</button>
+<button onclick="appendValue('2')">2</button>
+<button onclick="appendValue('3')">3</button>
+<button onclick="appendValue('-')">−</button>
+
+<button onclick="appendValue('0')">0</button>
+<button onclick="appendValue('.')">.</button>
+<button onclick="squareRoot()">√</button>
+<button onclick="appendValue('+')">+</button>
+
+<button onclick="appendValue('**')">xʸ</button>
+<button onclick="calculate()" class="equals">=</button>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+<p>&copy; 2026 Nichonometry</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

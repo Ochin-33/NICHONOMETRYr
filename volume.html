@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volume Calculator - Nichonometry</title>
+
+<link rel="icon" type="image/png" href="img/NJ.jpg">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+              <img src="img/NJ.jpg" alt="Nichonometry Logo">
+             <a href="index.html">Nichonometry</a>
+        </div>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="area.html">Area</a></li>
+                <li><a href="volume.html" class="active">Volume</a></li>
+                <li><a href="perimeter.html">Perimeter</a></li>
+                <li><a href="diameter.html">Diameter</a></li>
+                <li><a href="about.html">About</a></li>
+</ul>
+</nav>
+
+</header>
+
+<main>
+
+<h2>Volume Calculator</h2>
+
+<div class="card-container">
+
+<!-- Cube -->
+<div class="card">
+
+<h3>Cube</h3>
+
+<p><b>Formula:</b> V = Side³</p>
+
+<input type="number" id="cubeSide" placeholder="Side">
+
+<br><br>
+
+<button onclick="cubeVolume()">Solve</button>
+
+<br><br>
+
+<label>Answer</label>
+<input type="text" id="cubeResult" readonly>
+
+</div>
+
+<!-- Cylinder -->
+<div class="card">
+
+<h3>Cylinder</h3>
+
+<p><b>Formula:</b> V = πr²h</p>
+
+<input type="number" id="cylRadius" placeholder="Radius">
+
+<br><br>
+
+<input type="number" id="cylHeight" placeholder="Height">
+
+<br><br>
+
+<button onclick="cylinderVolume()">Solve</button>
+
+<br><br>
+
+<label>Answer</label>
+<input type="text" id="cylResult" readonly>
+
+</div>
+
+<!-- Cone -->
+<div class="card">
+
+<h3>Cone</h3>
+
+<p><b>Formula:</b> V = (πr²h)/3</p>
+
+<input type="number" id="coneRadius" placeholder="Radius">
+
+<br><br>
+
+<input type="number" id="coneHeight" placeholder="Height">
+
+<br><br>
+
+<button onclick="coneVolume()">Solve</button>
+
+<br><br>
+
+<label>Answer</label>
+<input type="text" id="coneResult" readonly>
+
+</div>
+
+<!-- Sphere -->
+<div class="card">
+
+<h3>Sphere</h3>
+
+<p><b>Formula:</b> V = (4/3)πr³</p>
+
+<input type="number" id="sphereRadius" placeholder="Radius">
+
+<br><br>
+
+<button onclick="sphereVolume()">Solve</button>
+
+<br><br>
+
+<label>Answer</label>
+<input type="text" id="sphereResult" readonly>
+
+</div>
+
+<!-- Rectangular Prism -->
+<div class="card">
+
+<h3>Rectangular Prism</h3>
+
+<p><b>Formula:</b> V = Length × Width × Height</p>
+
+<input type="number" id="prismLength" placeholder="Length">
+
+<br><br>
+
+<input type="number" id="prismWidth" placeholder="Width">
+
+<br><br>
+
+<input type="number" id="prismHeight" placeholder="Height">
+
+<br><br>
+
+<button onclick="prismVolume()">Solve</button>
+
+<br><br>
+
+<label>Answer</label>
+<input type="text" id="prismResult" readonly>
+
+</div>
+
+</div>
+
+</main>
+
+<footer>
+<p>&copy; 2026 Nichonometry</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

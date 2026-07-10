@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Calculator - Nichonometry</title>
+
+    <link rel="icon" type="image/png" href="img/NJ.jpg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+              <img src="img/NJ.jpg" alt="Nichonometry Logo">
+             <a href="index.html">Nichonometry</a>
+        </div>
+
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="area.html">Area</a></li>
+                <li><a href="volume.html">Volume</a></li>
+                <li><a href="perimeter.html">Perimeter</a></li>
+                <li><a href="diameter.html" class="active">Diameter</a></li>
+                <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+<h2>Circle Calculator</h2>
+
+<div class="card-container">
+
+    <!-- Diameter -->
+    <div class="card">
+
+        <h3>Diameter</h3>
+
+        <p><b>Formula:</b> Diameter = 2 × Radius</p>
+
+        <input type="number" id="radiusInput" placeholder="Enter Radius">
+
+        <br><br>
+
+        <button onclick="calculateDiameter()">Solve</button>
+
+        <br><br>
+
+        <label>Answer</label>
+        <input type="text" id="diameterAnswer" readonly>
+
+    </div>
+
+    <!-- Radius -->
+    <div class="card">
+
+        <h3>Radius</h3>
+
+        <p><b>Formula:</b> Radius = Diameter ÷ 2</p>
+
+        <input type="number" id="diameterInput" placeholder="Enter Diameter">
+
+        <br><br>
+
+        <button onclick="calculateRadius()">Solve</button>
+
+        <br><br>
+
+        <label>Answer</label>
+        <input type="text" id="radiusAnswer" readonly>
+
+    </div>
+
+    <!-- Circumference -->
+    <div class="card">
+
+        <h3>Circumference</h3>
+
+        <p><b>Formula:</b> C = 2πr</p>
+
+        <input type="number" id="circumferenceRadius" placeholder="Enter Radius">
+
+        <br><br>
+
+        <button onclick="calculateCircumference()">Solve</button>
+
+        <br><br>
+
+        <label>Answer</label>
+        <input type="text" id="circumferenceAnswer" readonly>
+
+    </div>
+
+</div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Nichonometry</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

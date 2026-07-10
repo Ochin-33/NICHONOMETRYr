@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculator - Nichonometry</title>
+
+    <link rel="icon" type="image/png" href="img/NJ.jpg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+              <img src="img/NJ.jpg" alt="Nichonometry Logo">
+              <a href="index.html">Nichonometry</a>
+        </div>
+
+    <nav>
+        <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="area.html" class="active">Area</a></li>
+                <li><a href="volume.html">Volume</a></li>
+                <li><a href="perimeter.html">Perimeter</a></li>
+                <li><a href="diameter.html">Diameter</a></li>
+                <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+<h2>Area Calculator</h2>
+
+<div class="card-container">
+
+    <!-- Rectangle -->
+    <div class="card">
+        <h3>Rectangle</h3>
+
+        <p><b>Formula:</b> Area = Length × Width</p>
+
+        <input type="number" id="rectLength" placeholder="Length">
+        <br><br>
+
+        <input type="number" id="rectWidth" placeholder="Width">
+        <br><br>
+
+        <button onclick="rectangleArea()">Solve</button>
+
+        <label>Answer:</label>
+        <input type="text" id="rectResult" readonly>
+    </div>
+
+    <!-- Square -->
+    <div class="card">
+
+        <h3>Square</h3>
+
+        <p><b>Formula:</b> Area = Side × Side</p>
+
+        <input type="number" id="squareSide" placeholder="Side Length">
+        <br><br>
+
+        <button onclick="squareArea()">Solve</button>
+
+        <label>Answer:</label>
+        <input type="text" id="squareResult" readonly>
+
+    </div>
+
+    <!-- Triangle -->
+    <div class="card">
+
+        <h3>Triangle</h3>
+
+        <p><b>Formula:</b> Area = (Base × Height) ÷ 2</p>
+
+        <input type="number" id="triBase" placeholder="Base">
+        <br><br>
+
+        <input type="number" id="triHeight" placeholder="Height">
+        <br><br>
+
+        <button onclick="triangleArea()">Solve</button>
+
+        <label>Answer:</label>
+        <input type="text" id="triResult" readonly>
+
+    </div>
+
+    <!-- Circle -->
+    <div class="card">
+
+        <h3>Circle</h3>
+
+        <p><b>Formula:</b> Area = πr²</p>
+
+        <input type="number" id="circleRadius" placeholder="Radius">
+        <br><br>
+
+        <button onclick="circleArea()">Solve</button>
+
+        <label>Answer:</label>
+        <input type="text" id="circleResult" readonly>
+
+    </div>
+
+    <!-- Parallelogram -->
+    <div class="card">
+
+        <h3>Parallelogram</h3>
+
+        <p><b>Formula:</b> Area = Base × Height</p>
+
+        <input type="number" id="paraBase" placeholder="Base">
+        <br><br>
+
+        <input type="number" id="paraHeight" placeholder="Height">
+        <br><br>
+
+        <button onclick="parallelogramArea()">Solve</button>
+
+        <label>Answer:</label>
+        <input type="text" id="paraResult" readonly>
+
+    </div>
+
+    <!-- Trapezoid -->
+    <div class="card">
+
+        <h3>Trapezoid</h3>
+
+        <p><b>Formula:</b> Area = ((Base₁ + Base₂) × Height) ÷ 2</p>
+
+        <input type="number" id="trapBase1" placeholder="Base 1">
+        <br><br>
+
+        <input type="number" id="trapBase2" placeholder="Base 2">
+        <br><br>
+
+        <input type="number" id="trapHeight" placeholder="Height">
+        <br><br>
+
+        <button onclick="trapezoidArea()">Solve</button>
+
+        <label>Answer:</label>
+        <input type="text" id="trapResult" readonly>
+
+    </div>
+
+</div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Nichonometry</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
