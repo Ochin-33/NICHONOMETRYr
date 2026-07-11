@@ -277,25 +277,37 @@ document.getElementById("paraPerimeterResult").value = perimeter;
 // SCIENTIFIC CALCULATOR
 // =============================
 
-function appendValue(value){
+let hasError = false;
+
+function appendValue(value) {
+
+    if (hasError) return;
+
     document.getElementById("display").value += value;
 }
 
-function clearDisplay(){
-    document.getElementById("display").value = "";
+function calculate() {
+
+    let display = document.getElementById("display");
+
+    try {
+
+        display.value = eval(display.value);
+        hasError = false;
+
+    } catch {
+
+        display.value = "Error";
+        hasError = true;
+
+    }
+
 }
 
-function calculate(){
+function clearDisplay() {
 
-    let expression = document.getElementById("display").value;
-
-    try{
-        let answer = eval(expression);
-        document.getElementById("display").value = answer;
-    }
-    catch{
-        document.getElementById("display").value = "Error";
-    }
+    document.getElementById("display").value = "";
+    hasError = false;
 
 }
 
