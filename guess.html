@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Guess the Number - Nichonometry</title>
+<link rel="icon" type="image/png" href="img/NJ.jpg">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+              
+              <img src="img/NJ.jpg" alt="Nichonometry Logo" onclick="toggleMusic()">      
+              <a href="index.html">Nichonometry</a>
+        </div>
+
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="area.html">Area</a></li>
+<li><a href="volume.html">Volume</a></li>
+<li><a href="perimeter.html">Perimeter</a></li>
+<li><a href="calculator.html">Calculator</a></li>
+<li><a href="diameter.html">Diameter</a></li>
+<li><a href="guess.html" class="active">Guess Game</a></li>
+</ul>
+</nav>
+
+</header>
+
+<main>
+
+<div class="guess-container">
+
+    <!-- Game -->
+    <div class="card guess-game">
+
+        <h2>🎲 Guess the Number</h2>
+
+        <p>I'm thinking of a number from <strong>1 to 100</strong>.</p>
+
+        <input type="number" id="guessInput" placeholder="Enter your guess">
+
+        <br><br>
+
+        <button id="guessBtn" onclick="checkGuess()">Guess</button>
+
+        <button id="restartBtn" onclick="restartGame()" style="display:none;">
+            Play Again
+        </button>
+
+        <h3 id="message"></h3>
+
+        <p>Attempts: <span id="attempts">0</span></p>
+
+    </div>
+
+    <!-- History -->
+    <div class="card history">
+
+        <h2>📜 Guess History</h2>
+
+        <ul id="historyList"></ul>
+
+    </div>
+
+</div>
+
+</main>
+
+<audio id="bgMusic">
+    <source src="img/I Knew It I Knew You.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
