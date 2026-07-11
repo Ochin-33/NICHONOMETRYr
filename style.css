@@ -340,7 +340,7 @@ footer{
     color:white;
 }
 
-
+/* LOGO CLICK */
 .logo a{
     text-decoration: none;
     color: white;
@@ -360,7 +360,7 @@ footer{
 @media (max-width:480px){
 
     .calculator{
-        max-width:100%;
+        max-width:300px;
         padding:15px;
     }
 
@@ -375,6 +375,7 @@ footer{
 
     .calc-buttons button{
         font-size:18px;
+        height:50px;
     }
 
 
