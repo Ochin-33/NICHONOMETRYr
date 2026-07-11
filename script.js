@@ -371,50 +371,70 @@ function calculateCircumference(){
 
 let secretNumber = Math.floor(Math.random() * 100) + 1;
 let attempts = 0;
-let history = document.getElementById("historyList");
 
 function checkGuess(){
 
     let guess = Number(document.getElementById("guessInput").value);
     let message = document.getElementById("message");
+    let history = document.getElementById("historyList");
 
-  
+    // Check if input is empty
+    if(document.getElementById("guessInput").value === ""){
+        message.innerHTML = "⚠ Please enter a number!";
+        message.style.color = "orange";
+        return;
+    }
+
+    // Check if number is between 1 and 100
+    if(guess < 1 || guess > 100){
+        message.innerHTML = "⚠ Enter a number from 1 to 100!";
+        message.style.color = "orange";
+        return;
+    }
+
+    // Count only valid guesses
+    attempts++;
+    document.getElementById("attempts").innerHTML = attempts;
+
     if(guess < secretNumber){
 
-    message.innerHTML = "🔻 Too Low!";
-    message.style.color = "red";
+        message.innerHTML = "🔻 Too Low!";
+        message.style.color = "red";
 
-    history.innerHTML +=
-    "<li>🔻 " + guess + " - Too Low</li>";
+        history.innerHTML +=
+        "<li>🔻 " + guess + " - Too Low</li>";
 
-}
+    }
 
-else if(guess > secretNumber){
+    else if(guess > secretNumber){
 
-    message.innerHTML = "🔺 Too High!";
-    message.style.color = "green";
+        message.innerHTML = "🔺 Too High!";
+        message.style.color = "green";
 
-    history.innerHTML +=
-    "<li>🔺 " + guess + " - Too High</li>";
+        history.innerHTML +=
+        "<li>🔺 " + guess + " - Too High</li>";
 
-}
+    }
 
-else{
+    else{
 
-    message.innerHTML =
-    "🎉 Congratulations! You guessed it in " +
-    attempts + " attempt(s)!";
+        message.innerHTML =
+        "🎉 Congratulations! You guessed it in " +
+        attempts +
+        " attempt(s)!";
 
-    message.style.color = "blue";
+        message.style.color = "blue";
 
-    history.innerHTML +=
-    "<li>🎉 " + guess + " - Correct!</li>";
+        history.innerHTML +=
+        "<li>🎉 " + guess + " - Correct!</li>";
 
-    document.getElementById("restartBtn").style.display="inline-block";
+        document.getElementById("restartBtn").style.display = "inline-block";
+        document.getElementById("guessBtn").disabled = true;
 
-    document.getElementById("guessBtn").disabled=true;
+    }
 
-}
+    // Clear input after every guess
+    document.getElementById("guessInput").value = "";
 
 }
 
@@ -430,16 +450,12 @@ function restartGame(){
     message.innerHTML = "";
     message.style.color = "black";
 
-    // Hide Play Again
-    document.getElementById("restartBtn").style.display = "none";
-
-    // Enable Guess button
-    document.getElementById("guessBtn").disabled = false;
-
     document.getElementById("historyList").innerHTML = "";
 
-}
+    document.getElementById("guessBtn").disabled = false;
+    document.getElementById("restartBtn").style.display = "none";
 
+}
 
 /* MUSIC */
 
